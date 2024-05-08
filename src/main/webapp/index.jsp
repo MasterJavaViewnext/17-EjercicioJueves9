@@ -41,7 +41,7 @@ request.getSession().setAttribute("productos", productos);
 						</td>
 						<td>
 							<!-- <button type="submit" name="btnEliminar" value="${producto.getId()}" onclick="form.method='delete';">Eliminar</button>  -->
-							<button name="btnEliminar" value="${producto.getId()}"> <a href="DeleteServlet">Eliminar</a></button>
+							<button type="button" onclick="setId(${producto.getId()})">Eliminar</button>
 						</td>
 					</tr>
 				</c:forEach>
@@ -49,4 +49,13 @@ request.getSession().setAttribute("productos", productos);
 		</table>
 	</form>
 </body>
+<script type="text/javascript">
+function setId(id){
+    if (!confirm('Estas seguro de que quieres eliminar al usuario con id '+id+'?')){ 
+    	e.preventDefault();
+    } else {
+    	window.location.href='DeleteServlet?eliminar='+id;
+    }
+}
+</script>
 </html>

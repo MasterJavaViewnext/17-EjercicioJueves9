@@ -22,7 +22,7 @@ public class DeleteServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		int id;
 		try {
-			id = Integer.parseInt(request.getParameter("btnEliminar"));
+			id = Integer.parseInt(request.getParameter("eliminar"));
 		} catch(NumberFormatException e) {
 			id = 0;
 		}
