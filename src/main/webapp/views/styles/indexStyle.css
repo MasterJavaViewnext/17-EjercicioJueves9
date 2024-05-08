@@ -1,4 +1,40 @@
 @charset "ISO-8859-1";
+
+#inputs {
+    white-space: nowrap;
+}
+
+input, select, button {
+	/* Para asegurarse de que todos los campos de texto tienen la misma configuración de letra
+     Por defecto, las áreas de texto tienen un tipo de letra monoespaciada */
+	font: 1em Roboto;
+	/* Tamaño uniforme del campo de texto */
+	width: 200px;
+	height: 30px;
+	box-sizing: border-box;
+	margin: 5px;
+	border-radius: 1em;
+	padding-left: 10px;
+	text-align: center;
+}
+
+button {
+	width: 100px;
+	margin: 0px;
+	padding-left: 5px;
+}
+
+.btnDelete{
+	width: 35px;
+}
+
+#btnAlta {
+	width: 100px;
+	margin-left: 120px;
+	padding-left: 5px;
+  	text-align: center;
+}
+
 #myInput {
   background-image: url('/css/searchicon.png'); /* Add a search icon to input */
   background-position: 10px 12px; /* Position the search icon */
@@ -15,17 +51,24 @@
   width: 100%; /* Full-width */
   border: 1px solid #ddd; /* Add a grey border */
   font-size: 18px; /* Increase font-size */
+  margin-top: 5px;
 }
 
 #myTable th, #myTable td {
   text-align: left; /* Left-align text */
   padding: 12px; /* Add padding */
+  text-align: center;
 }
 
 #myTable tr {
   /* Add a bottom border to all table rows */
   border-bottom: 1px solid #ddd;
 }
+
+#myTable tr:nth-child(even) {
+  background-color: rgb(155, 190, 255);
+}
+
 
 #myTable tr.header, #myTable tr:hover {
   /* Add a grey background color to the table header and on hover */

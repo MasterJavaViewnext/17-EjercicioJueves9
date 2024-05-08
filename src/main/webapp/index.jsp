@@ -5,6 +5,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
 <%
 TiendaServiceImpl tienda = new TiendaServiceImpl();
 List<Producto> productos = tienda.listaProductos();
@@ -12,28 +13,29 @@ request.getSession().setAttribute("productos", productos);
 %>
 <!DOCTYPE html>
 <html>
-<head>
+<head><!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <link rel="stylesheet" type="text/css" href="views/styles/estilos.css">
-<link rel="stylesheet" type="text/css" href="views/styles/indexStyle.css">
+<link rel="stylesheet" type="text/css"
+	href="views/styles/indexStyle.css">
 <meta charset="ISO-8859-1">
 <title>Mediamarkt</title>
 </head>
 <body>
+<%@include file="views/header.html"%>
 	<form action="AltaServlet" method="GET">
-		
-		<input type="text" id="filtroNombre" onkeyup="filtrarByNombre()" placeholder="Busqueda por nombre..">
-	
-		<select id="filtroSeccion" onchange="filtrarBySeccion()">
-			<option value="" selected disabled hidden>Selecciona una seccion</option>
-			<c:forEach items="${Seccion.values()}" var="seccion">
-				<option value="${seccion}">
-				${seccion}
-				</option>
-			</c:forEach>
-		</select>
-		
-		<input type="submit" value="Alta">
-	
+		<div id="inputs">
+			<input type="text" id="filtroNombre" onkeyup="filtrarByNombre()"
+				placeholder="Busqueda por nombre.."> <select
+				id="filtroSeccion" onchange="filtrarBySeccion()">
+				<option value="" selected disabled hidden>Selecciona una
+					seccion</option>
+				<c:forEach items="${Seccion.values()}" var="seccion">
+					<option value="${seccion}">${seccion}</option>
+				</c:forEach>
+			</select> <input id=btnAlta type="submit" value="Añadir">
+		</div>
 		<table id="myTable">
 			<tr>
 				<th>ID</th>
@@ -50,68 +52,18 @@ request.getSession().setAttribute("productos", productos);
 					<td><c:out value="${producto.getPrecio()}" /></td>
 					<td><c:out value="${producto.getStock()}" /></td>
 					<td>
-						<button type="submit" name="btnModificar" value="${producto.getId()}">Modificar</button>
+						<button type="submit" name="btnModificar"
+							value="${producto.getId()}">Modificar</button>
 					</td>
 					<td>
-						<!-- <button type="submit" name="btnEliminar" value="${producto.getId()}" onclick="form.method='delete';">Eliminar</button>  -->
-						<button type="button" onclick="deleteProducto(${producto.getId()})">Eliminar</button>
+						<button class="btnDelete" type="button" onclick="deleteProducto(${producto.getId()})">
+						<i class="fa fa-trash"></i></button>
 					</td>
 				</tr>
 			</c:forEach>
 		</table>
 	</form>
+<%@include file="views/footer.html"%>
 </body>
-<script type="text/javascript">
-function filtrarByNombre() {
-	  // Declare variables
-	  var input, filter, table, tr, td, i, txtValue;
-	  input = document.getElementById("filtroNombre");
-	  filter = input.value.toUpperCase();
-	  console.log(filter);
-	  table = document.getElementById("myTable");
-	  tr = table.getElementsByTagName("tr");
-
-	  // Loop through all table rows, and hide those who don't match the search query
-	  for (i = 0; i < tr.length; i++) {
-	    td = tr[i].getElementsByTagName("td")[1];
-	    if (td) {
-	      txtValue = td.textContent || td.innerText;
-	      if (txtValue.toUpperCase().indexOf(filter) > -1) {
-	        tr[i].style.display = "";
-	      } else {
-	        tr[i].style.display = "none";
-	      }
-	    }
-	  }
-}
-function filtrarBySeccion() {
-	  // Declare variables
-	  var input, filter, value, table, tr, td, i, txtValue;
-	  input = document.getElementById("filtroSeccion");
-	  filter = input.value;
-	  table = document.getElementById("myTable");
-	  tr = table.getElementsByTagName("tr");
-
-	  // Loop through all table rows, and hide those who don't match the search query
-	  for (i = 0; i < tr.length; i++) {
-	    td = tr[i].getElementsByTagName("td")[2];
-	    if (td) {
-	      txtValue = td.textContent || td.innerText;
-	      if (txtValue.toUpperCase().indexOf(filter) > -1) {
-	        tr[i].style.display = "";
-	      } else {
-	        tr[i].style.display = "none";
-	      }
-	    }
-	  }
-}
-
-function deleteProducto(id){
-    if (!confirm('Estas seguro de que quieres eliminar al usuario con id '+id+'?')){ 
-    	e.preventDefault();
-    } else {
-    	window.location.href='DeleteServlet?eliminar='+id;
-    }
-}
-</script>
+<script src="views/index.js"></script>
 </html>

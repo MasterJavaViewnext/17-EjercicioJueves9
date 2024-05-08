@@ -10,9 +10,46 @@
 }
 
 body {
+	margin: 0;
+}
+
+form {
 	font-family: Roboto;
-	/* Centrar el formulario en la página */
+	/* Centrar en la página */
 	margin: 0 auto;
+	width: 650px;
 	margin-top: 20px;
-	width: 500px;
+	margin-bottom: 20px;
+}
+
+header {
+	font-family: Roboto;
+	justify-content: center;
+	flex-direction: column;
+	align-content: center;
+	background-color: #dddddd;
+	align-content: center;
+	flex-direction: column;
+}
+
+header h1 {
+	justify-content: center;
+	display: flex;
+	font-size: 30px;
+	font-weight: 600;
+	align-self: center;
+	background-image: linear-gradient(to left, #000080, #38b3e3);
+	color: transparent;
+	background-clip: text;
+	-webkit-background-clip: text;
+	font-size: 30px;
+}
+
+footer {
+	font-family: Roboto;
+	height: 30px;
+	text-align: center;
+	padding: 5px;
+	background-color: #dddddd;
+	color: #000;
 }

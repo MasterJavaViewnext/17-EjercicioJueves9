@@ -5,12 +5,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="styles/estilos.css">
-<link rel="stylesheet" type="text/css" href="styles/formStyle.css">
+<link rel="stylesheet" type="text/css" href="views/styles/estilos.css">
+<link rel="stylesheet" type="text/css" href="views/styles/formStyle.css">
 <meta charset="ISO-8859-1">
 <title>Formulario</title>
 </head>
 <body>
+<%@include file="header.html"%>
 <form action="AltaServlet" method="POST">
 		<div>
 			<label for="nombre">Nombre:</label> <input type="text" id="nombre"
@@ -37,8 +38,10 @@
 				id="stock" name="stock" min="0" value="${producto.getStock()}" required/>
 		</div>
 		<div class="button">
-			<button type="submit">${producto == null ? "Añadir" : "Actualizar" }</button>
+			<button id="btnAlta" type="submit">${producto == null ? "Añadir" : "Actualizar" }</button>
+			<button id="btnVolver" type="button" name="volver" onclick="history.back()">Volver</button>
 		</div>
 	</form>
+<%@include file="footer.html"%>
 </body>
 </html>

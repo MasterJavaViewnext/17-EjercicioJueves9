@@ -17,7 +17,7 @@ public class DeleteServlet extends HttpServlet {
 	private static TiendaServiceImpl tienda = new TiendaServiceImpl();
  
 	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 * metodo GET para eliminar un usuario que es llamado desde la tabla de index.jsp
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		int id;

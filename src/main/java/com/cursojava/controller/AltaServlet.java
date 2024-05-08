@@ -52,11 +52,6 @@ public class AltaServlet extends HttpServlet {
 		}
 		response.sendRedirect("index.jsp");
 	}
-	
-	
-	protected void doDelete(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-		System.out.println("delete");
-	}
 
 }

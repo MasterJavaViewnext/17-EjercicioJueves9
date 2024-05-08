@@ -18,10 +18,19 @@ public class TiendaServiceImpl implements TiendaService{
 			new Producto(6, "movil", Seccion.TELEFONIA, 800.05, 1)
 			));
 	
+	/**
+	 * Método que devuelve el id mas altos de todos los productos
+	 * o 0 si no hay productos
+	 * @return int id
+	 */
 	public int lastId() {
-		return productos.stream().max((p1, p2) -> {
-			return p1.getId()-p2.getId();
-		}).get().getId();
+		int id = 0;
+		if (!productos.isEmpty()) {
+			productos.stream().max((p1, p2) -> {
+				return p1.getId()-p2.getId();
+			}).get().getId();
+		}
+		return id;
 	}
 	
 	@Override

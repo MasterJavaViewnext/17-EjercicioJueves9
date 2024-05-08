@@ -1,19 +1,7 @@
 @charset "ISO-8859-1";
 
-a {
-    color: #0060B6;
-    text-decoration: none;
-}
-
-a:hover {
-    color:#00A0C6; 
-    text-decoration:none; 
-    cursor:pointer;  
-}
-
 form {
 	display: flex;
-	flex-direcction: row;
 	flex-wrap: wrap;
 	margin-top: 20px;
 	font-size: large;
@@ -21,7 +9,7 @@ form {
 	padding: 1em;
 	border: 2px solid rgb(102, 102, 102);
 	border-radius: 1em;
-	background-color: #55B4FF;
+	background-color: #9bbeff;
 }
 
 fieldset div label {
@@ -31,21 +19,27 @@ fieldset div label {
 label  {
 	/* Tamaño y alineación uniforme */
 	display: inline-block;
-	width: 175px;
+	width: 200px;
 	text-align: right;
 }
 
-input {
+input, select {
 	/* Para asegurarse de que todos los campos de texto tienen la misma configuración de letra
      Por defecto, las áreas de texto tienen un tipo de letra monoespaciada */
 	font: 1em Roboto;
 	/* Tamaño uniforme del campo de texto */
-	width: 200px;
+	width: 220px;
+	height: 30px;
 	box-sizing: border-box;
 	margin: 5px;
 	border-radius: 1em;
 	padding-left: 10px;
 	text-align: left;
+	margin-left: 30px;
+}
+
+select {
+	padding-left: 5px;
 }
 
 input:focus {
@@ -53,10 +47,7 @@ input:focus {
 	border-color: #000;
 }
 
-.button {
-	display: flex;
-	margin-left: 110px; /* mismo tamaño que los elementos de la etiqueta */
-}
+
 
 button {
 	padding-inline: 15px;
@@ -71,31 +62,20 @@ button {
 	margin-left: 0.5em;
 }
 
-select {
-	width:40%;
-	text-align: left;
-	font-size: medium;
-}
-
-fieldset div input {
-	margin-left: 100px;
-	width: 50px;
-}
-
-fieldset div {
-	
-	display: flex;
-	flex-direcction: row;
-	flex-wrap: non-wrap;
-	justify-content: center;
-}
-
-fieldset {
+.button {
 	width: 100%;
-	display: inline-block;
+	justify-content: flex-end;
+  	flex-direction: column;
+  	height: 50px;
+  	display: inline-block;
+  	padding-left: 62%;
 }
 
-#cabecera_select {    
-	width: 40%;
-    margin-right: 15px;
+#btnAlta{
+	justify-content: center;
+	display: inline-flex;
+}
+#btnVolver{
+	 justify-content: flex-end;
+  display: inline-flex;
 }
