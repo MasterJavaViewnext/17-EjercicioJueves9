@@ -15,7 +15,12 @@ public class TiendaServiceImpl implements TiendaService{
 			new Producto(3, "monitor", Seccion.INFORMATICA, 140.00, 6),
 			new Producto(4, "consola", Seccion.VIDEOJUEGOS, 430.05, 3), 
 			new Producto(5, "television", Seccion.TELEVISION, 649.95, 2),
-			new Producto(6, "movil", Seccion.TELEFONIA, 800.05, 1)
+			new Producto(6, "ordenador", Seccion.INFORMATICA, 409.95, 4),
+			new Producto(7, "altavoces", Seccion.SONIDO, 55.40, 10),
+			new Producto(8, "monitor", Seccion.INFORMATICA, 140.00, 6),
+			new Producto(9, "consola", Seccion.VIDEOJUEGOS, 430.05, 3), 
+			new Producto(10, "television", Seccion.TELEVISION, 649.95, 2),
+			new Producto(11, "movil", Seccion.TELEFONIA, 800.05, 1)
 			));
 	
 	/**

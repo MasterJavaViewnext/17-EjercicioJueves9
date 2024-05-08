@@ -20,7 +20,7 @@ request.getSession().setAttribute("productos", productos);
 <link rel="stylesheet" type="text/css"
 	href="views/styles/indexStyle.css">
 <meta charset="ISO-8859-1">
-<title>Mediamarkt</title>
+<title>Tienda de electrónica</title>
 </head>
 <body>
 <%@include file="views/header.html"%>
@@ -38,11 +38,11 @@ request.getSession().setAttribute("productos", productos);
 		</div>
 		<table id="myTable">
 			<tr>
-				<th>ID</th>
-				<th>Nombre</th>
-				<th>Seccion</th>
-				<th>Precio</th>
-				<th>Stock</th>
+				<th onclick="sortTableByNumero(0)">ID</th>
+				<th onclick="sortTableByLetra(1)">Nombre</th>
+				<th onclick="sortTableByLetra(2)">Seccion</th>
+				<th onclick="sortTableByNumero(3)">Precio</th>
+				<th onclick="sortTableByNumero(4)">Stock</th>
 			</tr>
 			<c:forEach items="${productos}" var="producto">
 				<tr>
