@@ -5,8 +5,10 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" type="text/css" href="styles/estilos.css">
+<link rel="stylesheet" type="text/css" href="styles/formStyle.css">
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Formulario</title>
 </head>
 <body>
 <form action="AltaServlet" method="POST">
