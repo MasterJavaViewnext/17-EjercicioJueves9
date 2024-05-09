@@ -12,6 +12,7 @@
 </head>
 <body>
 <%@include file="header.html"%>
+<div class="content">
 <form action="AltaServlet" method="POST">
 		<div>
 			<label for="nombre">Nombre:</label> <input type="text" id="nombre"
@@ -42,6 +43,8 @@
 			<button id="btnVolver" type="button" name="volver" onclick="history.back()">Volver</button>
 		</div>
 	</form>
+</div>
 <%@include file="footer.html"%>
+<script src="header.js"></script>
 </body>
 </html>

@@ -24,6 +24,7 @@ request.getSession().setAttribute("productos", productos);
 </head>
 <body>
 <%@include file="views/header.html"%>
+<div class="content">
 	<form action="AltaServlet" method="GET">
 		<div id="inputs">
 			<input type="text" id="filtroNombre" onkeyup="filtrarByNombre()"
@@ -63,7 +64,9 @@ request.getSession().setAttribute("productos", productos);
 			</c:forEach>
 		</table>
 	</form>
+</div>
 <%@include file="views/footer.html"%>
 </body>
 <script src="views/index.js"></script>
+<script src="views/header.js"></script>
 </html>

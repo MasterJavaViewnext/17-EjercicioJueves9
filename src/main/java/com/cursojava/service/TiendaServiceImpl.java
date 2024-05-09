@@ -20,7 +20,17 @@ public class TiendaServiceImpl implements TiendaService {
 					new Producto(8, "monitor", Seccion.INFORMATICA, 140.00, 6),
 					new Producto(9, "consola", Seccion.VIDEOJUEGOS, 430.05, 3),
 					new Producto(10, "television", Seccion.TELEVISION, 649.95, 2),
-					new Producto(11, "movil", Seccion.TELEFONIA, 800.05, 1)));
+					new Producto(11, "movil", Seccion.TELEFONIA, 800.05, 1),
+					new Producto(12, "ordenador", Seccion.INFORMATICA, 409.95, 4),
+					new Producto(13, "altavoces", Seccion.SONIDO, 55.40, 10),
+					new Producto(14, "consola", Seccion.VIDEOJUEGOS, 430.05, 3),
+					new Producto(15, "television", Seccion.TELEVISION, 649.95, 2),
+					new Producto(16, "ordenador", Seccion.INFORMATICA, 409.95, 4),
+					new Producto(17, "altavoces", Seccion.SONIDO, 55.40, 10),
+					new Producto(18, "monitor", Seccion.INFORMATICA, 140.00, 6),
+					new Producto(19, "consola", Seccion.VIDEOJUEGOS, 430.05, 3),
+					new Producto(20, "television", Seccion.TELEVISION, 649.95, 2),
+					new Producto(21, "movil", Seccion.TELEFONIA, 800.05, 1)));
 
 	/**
 	 * Método que devuelve el id mas altos de todos los productos o 0 si no hay
