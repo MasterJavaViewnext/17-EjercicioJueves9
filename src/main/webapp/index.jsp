@@ -27,14 +27,15 @@ request.getSession().setAttribute("productos", productos);
 	<form action="AltaServlet" method="GET">
 		<div id="inputs">
 			<input type="text" id="filtroNombre" onkeyup="filtrarByNombre()"
-				placeholder="Busqueda por nombre.."> <select
-				id="filtroSeccion" onchange="filtrarBySeccion()">
+				placeholder="Busqueda por nombre.."> 
+			<select id="filtroSeccion" onchange="filtrarBySeccion()">
 				<option value="" selected disabled hidden>Selecciona una
 					seccion</option>
 				<c:forEach items="${Seccion.values()}" var="seccion">
 					<option value="${seccion}">${seccion}</option>
 				</c:forEach>
-			</select> <input id=btnAlta type="submit" value="Añadir">
+			</select> 
+			<input id=btnAlta type="submit" value="Añadir">
 		</div>
 		<table id="myTable">
 			<tr>

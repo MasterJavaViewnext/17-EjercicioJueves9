@@ -53,7 +53,7 @@ window.addEventListener('keydown',function(e) {
 }, true);
 
 function deleteProducto(id){
-    if (!confirm('Estas seguro de que quieres eliminar al usuario con id '+id+'?')){ 
+    if (!confirm('Estas seguro de que quieres eliminar el producto con id '+id+'?')){ 
     	e.preventDefault();
     } else {
     	window.location.href='DeleteServlet?eliminar='+id;

@@ -18,6 +18,10 @@ input, select, button {
 	text-align: center;
 }
 
+#filtroNombre {
+	text-align: left;	
+}
+
 button {
 	width: 100px;
 	margin: 0px;

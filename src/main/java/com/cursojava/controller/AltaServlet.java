@@ -43,7 +43,9 @@ public class AltaServlet extends HttpServlet {
 		producto.setSeccion(Seccion.valueOf(request.getParameter("seccion")));
 		producto.setPrecio(Double.parseDouble(request.getParameter("precio")));
 		producto.setStock(Long.parseLong(request.getParameter("stock")));
-		
+
+		System.out.println("OG-> "+productoOriginal);
+		System.out.println("nuevo-> "+producto);
 		if (productoOriginal == null) {
 			tienda.insertProducto(producto);
 		} else {
