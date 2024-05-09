@@ -29,8 +29,7 @@ request.getSession().setAttribute("productos", productos);
 			<input type="text" id="filtroNombre" onkeyup="filtrarByNombre()"
 				placeholder="Busqueda por nombre.."> 
 			<select id="filtroSeccion" onchange="filtrarBySeccion()">
-				<option value="" selected disabled hidden>Selecciona una
-					seccion</option>
+				<option value="" selected >Seleccionar sección</option>
 				<c:forEach items="${Seccion.values()}" var="seccion">
 					<option value="${seccion}">${seccion}</option>
 				</c:forEach>
