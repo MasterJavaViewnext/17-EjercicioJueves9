@@ -18,6 +18,7 @@ public class DeleteServlet extends HttpServlet {
  
 	/**
 	 * metodo GET para eliminar un usuario que es llamado desde la tabla de index.jsp
+	 * Luego vuelve a la vista principal index.jsp
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		int id;

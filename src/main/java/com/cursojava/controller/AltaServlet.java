@@ -19,7 +19,7 @@ public class AltaServlet extends HttpServlet {
 	
 	/**
 	 * Método que llama el botón alta desde la pantalla principal y asina un producto 
-	 * priginal para saber si estamos modificando o insertando
+	 * original para saber si estamos modificando o insertando. Llama al formulario form.jsp
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session = request.getSession();
@@ -36,7 +36,7 @@ public class AltaServlet extends HttpServlet {
 
 	/**
 	 * Metodo que llama la vista form.jsp para añadir o actualizar un producto dependiendo
-	 * si había un producto asignado antes o no
+	 * si había un producto asignado antes o no. Luego llama a la vista principal index.jsp
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		Producto productoOriginal = (Producto)request.getSession().getAttribute("producto");

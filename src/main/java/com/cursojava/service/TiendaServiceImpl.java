@@ -33,8 +33,8 @@ public class TiendaServiceImpl implements TiendaService {
 					new Producto(21, "movil", Seccion.TELEFONIA, 800.05, 1)));
 
 	/**
-	 * Método que devuelve el id mas altos de todos los productos o 0 si no hay
-	 * productos
+	 * Método que devuelve el id mas alto de todos los productos o 0 si no hay
+	 * productos en la lista productos
 	 * 
 	 * @return int id
 	 */
@@ -74,6 +74,10 @@ public class TiendaServiceImpl implements TiendaService {
 		productos.remove(findById(id));
 	}
 
+	/*
+	 * Metodo que obtiene el objeto que coincida con el id y lo actualiza
+	 * sobrescribiendo todos los campos con el nuevo usuario
+	 */
 	@Override
 	public void updateProducto(Producto producto) {
 		Optional<Producto> productoOriginal = productos.stream().filter(p -> p.getId() == producto.getId()).findFirst();
