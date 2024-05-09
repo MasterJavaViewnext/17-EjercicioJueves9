@@ -18,7 +18,8 @@ public class AltaServlet extends HttpServlet {
 	private static TiendaServiceImpl tienda = new TiendaServiceImpl();
 	
 	/**
-	 * Método que llama el botón alta desde la pantalla principal
+	 * Método que llama el botón alta desde la pantalla principal y asina un producto 
+	 * priginal para saber si estamos modificando o insertando
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session = request.getSession();
@@ -34,7 +35,8 @@ public class AltaServlet extends HttpServlet {
 	}
 
 	/**
-	 * Metodo que llama la vista form.jsp para añadir o actualizar un producto
+	 * Metodo que llama la vista form.jsp para añadir o actualizar un producto dependiendo
+	 * si había un producto asignado antes o no
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		Producto productoOriginal = (Producto)request.getSession().getAttribute("producto");
@@ -44,8 +46,6 @@ public class AltaServlet extends HttpServlet {
 		producto.setPrecio(Double.parseDouble(request.getParameter("precio")));
 		producto.setStock(Long.parseLong(request.getParameter("stock")));
 
-		System.out.println("OG-> "+productoOriginal);
-		System.out.println("nuevo-> "+producto);
 		if (productoOriginal == null) {
 			tienda.insertProducto(producto);
 		} else {

@@ -51,7 +51,6 @@ public class TiendaServiceImpl implements TiendaService {
 	@Override
 	public void insertProducto(Producto producto) {
 		producto.setId(lastId() + 1);
-		System.out.println(producto);
 		productos.add(producto);
 	}
 

@@ -51,15 +51,5 @@ public class Producto {
 	public void setStock(long stock) {
 		this.stock = stock;
 	}
-
-	@Override
-	public String toString() {
-		StringBuilder builder = new StringBuilder();
-		builder.append("Producto [id=").append(id).append(", nombre=").append(nombre).append(", seccion=")
-				.append(seccion).append(", precio=").append(precio).append(", stock=").append(stock).append("]");
-		return builder.toString();
-	}
-	
-	
 	
 }
