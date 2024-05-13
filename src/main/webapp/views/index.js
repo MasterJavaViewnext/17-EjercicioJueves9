@@ -20,6 +20,7 @@ function filtrarByNombre() {
 	    }
 	  }
 }
+
 function filtrarBySeccion() {
 	  // Declare variables
 	  var input, filter, value, table, tr, td, i, txtValue;
@@ -42,6 +43,7 @@ function filtrarBySeccion() {
 	  }
 }
 
+//Metodo para que el enter no funcione en el input de busqueda por nombre
 window.addEventListener('keydown',function(e) {
     if (e.keyIdentifier=='U+000A' || e.keyIdentifier=='Enter' || e.keyCode==13) {
         if (e.target.nodeName=='INPUT' && e.target.type=='text') {
@@ -52,6 +54,7 @@ window.addEventListener('keydown',function(e) {
     }
 }, true);
 
+//Confirmacion para borrar un producto
 function deleteProducto(id){
     if (!confirm('Estas seguro de que quieres eliminar el producto con id '+id+'?')){ 
     	e.preventDefault();
